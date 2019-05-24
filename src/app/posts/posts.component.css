@@ -1,0 +1,29 @@
+
+.btn-action{
+  margin: 0rem;
+}
+.action-btn{
+  margin: 1rem;
+}
+.post-card{
+  padding: 1rem;
+  margin:1rem;
+  background: white;
+  box-sizing: border-box;
+   
+}
+.section-title{
+  margin: 0rem 5rem;
+}
+.post-title {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: serif;
+  
+}
+.post-title:hover{
+  text-decoration-line: underline;
+
+}
+

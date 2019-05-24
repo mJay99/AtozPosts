@@ -1,0 +1,17 @@
+<!-- This is a comments section -->
+<div *ngFor="let comment of comments" class="comments-list">
+
+  <div class="card">
+    <div class="card-body">
+      <span class="card-title" title="{{comment.name}}">{{comment.name}}</span>
+      <aside> <span class="comment-user" title="{{comment.email}}"><i class="fas fa-user-circle"></i>
+          {{comment.email}}</span>
+        &#9473;
+        <span class="card-text">{{comment.body}}</span>
+      </aside>
+
+    </div>
+  </div>
+
+
+</div>

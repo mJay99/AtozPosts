@@ -1,0 +1,18 @@
+<!--This a separate alert component which is common for all types of alerts. -->
+
+<div *ngIf="alert && alert.type=='Success'" class="alert alert-success " >
+    <button type="button" (click)="close()" class="close"  aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <strong class="text-center" *ngIf="alert">{{alert.alertMessage}}</strong> 
+</div>
+
+<div *ngIf="alert && alert.type=='Error'" class="alert alert-danger ">
+    <button type="button" (click)="close()" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <strong class="text-center" *ngIf="alert">{{alert.alertMessage}}</strong> 
+</div>
+
+
+

@@ -1,0 +1,114 @@
+.container-fluid {
+  background: whitesmoke;
+  padding: 1rem 0rem;
+}
+
+.btn-action {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.left-side {
+  text-align: left;
+}
+
+.right-side {
+  text-align: right;
+}
+
+.action-btn {
+  margin: 0rem 1rem 0rem 0rem;
+}
+
+.post-card {
+  padding: 2rem;
+  margin: 0.5rem 6rem 2rem 6rem;
+  background: white;
+  box-sizing: border-box;
+
+}
+
+.section-title {
+  margin: 0rem 6rem;
+}
+
+.fa-edit {
+  cursor: pointer;
+}
+
+.fa-edit:hover {
+  color: dodgerblue;
+}
+
+.post-title {
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1;
+  font-family: serif;
+
+}
+
+.post-title:hover {
+  text-decoration: underline;
+  color: #13a3f7;
+
+}
+
+.post-title-edit {
+  font-size: 1.2em;
+  font-weight: 100;
+  font-family: serif;
+}
+
+.post-body {
+  margin-top: .5em;
+}
+
+.post-body-edit {
+  font-size: 1rem;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  
+}
+
+.comments-section {
+  border-top: solid 1px darkgrey;
+  box-sizing: border-box;
+  margin: 0em 6em;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .post-card {
+    padding: 1.5rem;
+    margin: 0.5rem 2rem 1rem 2rem;
+    background: white;
+    box-sizing: border-box;
+
+  }
+  .post-title {
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 1;
+    font-family: serif;
+  
+  }
+  
+  .post-title:hover {
+    text-decoration: underline;
+    color: #13a3f7;
+  
+  }
+  .section-title {
+    margin: 0rem 2rem;
+  }
+  .comments-section {
+    border-top: solid 1px darkgrey;
+    box-sizing: border-box;
+    margin: 0em 1rem;
+  }
+}

@@ -1,0 +1,41 @@
+
+<div class="container-fluid" *ngIf="post">
+
+  <!--In this section we can see the post details -->
+
+ <div *ngIf="!isupdatePostVisible" class="post-card">
+    <div class="right-side">
+        <i class="fas fa-edit" title="Edit post" (click)="editPost()"></i>
+    </div>
+    <div class="left-side">
+        <span class="post-title" title="{{post.title}}">{{post.title}}</span>
+        <p class="post-body"  *ngIf="post" >{{post.body}}</p>
+    </div> 
+  </div>
+ 
+  <!--In this section we can update the post details -->
+
+  <div *ngIf="isupdatePostVisible" class="post-card">
+        <div class="form-group">
+              <label for="posttitle" title="Post title">Post Title:</label>
+              <input type="text" #name="ngModel" title="{{post.title}}" class="form-control post-title-edit" [(ngModel)]="post.title">
+        </div>
+        <div class="form-group">
+              <label for="postbody" title="Post Content" >Post Content:</label>
+              <textarea class="form-control post-body-edit" #name="ngModel" title="{{post.body}}" rows="3" [(ngModel)]="post.body"></textarea>
+        </div>
+        <div class="btn-action">
+              <button name="updatepost" title="Update post" class="action-btn btn btn-primary" (click)="updatePost()">Update</button>
+              <button name="cancelupdatepost" title="Cancel" class="action-btn btn btn-danger" (click)="editPost()">Cancel</button>
+        </div>
+  </div>
+
+  <h4 class="section-title">Comments</h4>
+
+  <!--This a child component included here named as Comments -->
+  <div class="comments-section">
+        <app-comments></app-comments>
+  </div>
+
+
+</div>

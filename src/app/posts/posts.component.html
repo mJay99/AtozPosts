@@ -1,0 +1,42 @@
+<div class="container" *ngIf="posts">
+  <div class="btn-action">
+      <button name="createpost" title="Create new post" class="action-btn btn btn-primary" (click)="createPostVisible()">Create new Post</button>
+  </div>
+<!-- This is a section in which we can create a new post. -->
+
+  <div *ngIf="iscreatePostVisible" class="card post-card">
+    <h4 class="alert-heading">create new post</h4>
+    <form [formGroup]="createPostForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="posttitle" title="Title for the post">Title for the post:</label>
+            <input type="text" formControlName="title" class="form-control" name="posttitle" id="" placeholder="Post title"
+              class="form-control" [ngClass]="{ 'is-invalid': f.title.touched && f.title.errors }" />
+            <div *ngIf="f.title.touched && f.title.errors" class="invalid-feedback">
+                <div *ngIf="f.title.errors.required">Post title cant be empty</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="postbody" title="Content of the post">Content of the post</label>
+            <textarea class="form-control" title="Post content" formControlName="body" name="postbody" id="" rows="3" placeholder="Post Content"
+              class="form-control" [ngClass]="{ 'is-invalid': f.body.touched && f.body.errors }"></textarea>
+            <div *ngIf="f.body.touched && f.body.errors" class="invalid-feedback">
+                <div *ngIf="f.body.errors.required">Post body cant be empty</div>
+            </div>
+        </div>
+        <button type="submit" title="Submit" [disabled]="createPostForm.invalid" class="btn btn-primary">Submit</button>
+        <button name="cancelupdatepost" title="Cancel" class="action-btn btn btn-danger" (click)="createPostVisible()">Cancel</button>
+    </form>
+
+  </div>
+<!-- This is a section in which we can see previous posts from the server. -->
+  <div *ngFor="let post of posts">
+      <div class="card post-card">
+          <h2 class="card-title post-title" routerLink="/details/{{post.id}}" routerLinkActive="router-link-active"
+            title="{{post.title}}">{{post.title}}</h2>
+          <a routerLink="/details/{{post.id}}" routerLinkActive="router-link-active">ReadMore..</a>
+        
+      </div>
+  </div>
+</div>

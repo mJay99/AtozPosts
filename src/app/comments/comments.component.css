@@ -1,0 +1,25 @@
+/* .card {
+  margin: 1rem;
+  padding: .5rem;
+  width: 70rem;
+} */
+
+.card-title{
+  color:dodgerblue;
+  font-size: 300;
+  cursor: pointer;
+  
+}
+.comments-list {
+  padding:.5em;
+  margin:.5em;
+}
+
+.comment-user {
+  cursor: pointer;
+  color:grey;
+}
+
+.comment-user:hover {
+  text-decoration: underline;
+}
